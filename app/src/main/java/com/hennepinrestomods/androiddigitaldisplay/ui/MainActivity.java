@@ -43,7 +43,6 @@ import com.github.pires.obd.commands.SpeedCommand;
 import com.github.pires.obd.commands.engine.RPMCommand;
 import com.github.pires.obd.commands.engine.RuntimeCommand;
 import com.github.pires.obd.enums.AvailableCommandNames;
-import com.github.pires.obd.reader.R;
 import com.hennepinrestomods.androiddigitaldisplay.R;
 import com.hennepinrestomods.androiddigitaldisplay.config.ObdConfig
 import com.hennepinrestomods.androiddigitaldisplay.io.AbstractGatewayService;
