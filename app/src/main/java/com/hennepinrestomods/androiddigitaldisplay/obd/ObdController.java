@@ -144,7 +144,7 @@ public class ObdController {
 
                     onProgressUpdate(7);
 
-                    MyTroubleCodesCommand tcoc = new MyTroubleCodesCommand();
+                    TroubleCodesCommandImpl tcoc = new TroubleCodesCommandImpl();
                     tcoc.run(sock.getInputStream(), sock.getOutputStream());
                     onProgressUpdate(8);
                     result = tcoc.getFormattedResult();

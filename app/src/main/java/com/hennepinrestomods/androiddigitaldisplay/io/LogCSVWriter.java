@@ -3,7 +3,7 @@ package com.hennepinrestomods.androiddigitaldisplay.io;
 import android.os.Environment;
 import android.util.Log;
 
-import com.github.pires.obd.reader.net.ObdReading;
+import com.hennepinrestomods.androiddigitaldisplay.net.ObdReading;
 
 import java.io.BufferedWriter;
 import java.io.File;
