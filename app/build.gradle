@@ -29,4 +29,9 @@ dependencies {
 
     api 'com.android.volley:volley:1.1.0'
     api 'com.github.pires:obd-java-api:1.0-RC16'
+
+    implementation 'org.roboguice:roboguice:3.+'
+    implementation 'org.roboguice:roboblender:3.+'
+    implementation 'com.squareup.retrofit:retrofit:1.9.0'
+    implementation 'com.android.support:appcompat-v7:22.1.1'
 }
