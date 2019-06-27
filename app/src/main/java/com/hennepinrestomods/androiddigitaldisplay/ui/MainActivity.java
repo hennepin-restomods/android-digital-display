@@ -44,7 +44,7 @@ import com.github.pires.obd.commands.engine.RPMCommand;
 import com.github.pires.obd.commands.engine.RuntimeCommand;
 import com.github.pires.obd.enums.AvailableCommandNames;
 import com.hennepinrestomods.androiddigitaldisplay.R;
-import com.hennepinrestomods.androiddigitaldisplay.config.ObdConfig
+import com.hennepinrestomods.androiddigitaldisplay.config.ObdConfig;
 import com.hennepinrestomods.androiddigitaldisplay.io.AbstractGatewayService;
 import com.hennepinrestomods.androiddigitaldisplay.io.LogCSVWriter;
 import com.hennepinrestomods.androiddigitaldisplay.io.MockObdGatewayService;
@@ -389,7 +389,7 @@ public class MainActivity extends RoboActivity implements ObdProgressListener, L
         sensorManager.registerListener(orientListener, orientSensor,
                 SensorManager.SENSOR_DELAY_UI);
         wakeLock = powerManager.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK,
-                "ObdReader");
+                "AndroidDigitalDisplay: ");
 
         // get Bluetooth device
         final BluetoothAdapter btAdapter = BluetoothAdapter
