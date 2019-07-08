@@ -32,8 +32,8 @@ import com.github.pires.obd.enums.ObdProtocols;
 import com.github.pires.obd.exceptions.MisunderstoodCommandException;
 import com.github.pires.obd.exceptions.NoDataException;
 import com.github.pires.obd.exceptions.UnableToConnectException;
-import com.github.pires.obd.reader.R;
-import com.github.pires.obd.reader.io.BluetoothManager;
+import com.hennepinrestomods.androiddigitaldisplay.R;
+import com.hennepinrestomods.androiddigitaldisplay.io.BluetoothManager;
 import com.google.inject.Inject;
 
 import java.io.IOException;

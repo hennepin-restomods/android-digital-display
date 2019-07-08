@@ -9,16 +9,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.github.pires.obd.reader.R;
-import com.github.pires.obd.reader.trips.TripListAdapter;
-import com.github.pires.obd.reader.trips.TripLog;
-import com.github.pires.obd.reader.trips.TripRecord;
+import com.hennepinrestomods.androiddigitaldisplay.R;
+import com.hennepinrestomods.androiddigitaldisplay.trips.TripListAdapter;
+import com.hennepinrestomods.androiddigitaldisplay.trips.TripLog;
+import com.hennepinrestomods.androiddigitaldisplay.trips.TripRecord;
 
 import java.util.List;
 
 import roboguice.activity.RoboActivity;
 
-import static com.github.pires.obd.reader.activity.ConfirmDialog.createDialog;
+import static com.hennepinrestomods.androiddigitaldisplay.ui.ConfirmDialog.createDialog;
 
 /**
  * Some code taken from https://github.com/wdkapps/FillUp
