@@ -1,143 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/vehicle_view"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboard_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.hennepinrestomods.androiddigitaldisplay.ui.MainActivity">
+    android:screenOrientation="landscape">
 
-    <TableRow
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+    <com.github.anastr.speedviewlib.ImageSpeedometer
+        android:id="@+id/speedometer"
+        android:layout_width="478dp"
+        android:layout_height="529dp"
+        android:layout_x="101dp"
+        android:layout_y="77dp"
+        app:sv_image="@drawable/examplespeedometer"
+        app:sv_indicator="NormalSmallIndicator"
+        app:sv_speedTextColor="@android:color/transparent"
+        app:sv_speedometerWidth="35dp"
+        app:sv_unitTextColor="@android:color/transparent" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:tag="SPEED"
-            android:text="@string/text_zero"
-            android:textSize="@dimen/abc_text_size_display_3_material" />
+    <com.github.anastr.speedviewlib.ImageSpeedometer
+        android:id="@+id/tachometer"
+        android:layout_width="489dp"
+        android:layout_height="483dp"
+        android:layout_x="706dp"
+        android:layout_y="73dp"
+        app:sv_centerCircleColor="#b2f941ff"
+        app:sv_highSpeedColor="#ec2f33"
+        app:sv_image="@drawable/exampletachometer"
+        app:sv_indicator="NormalSmallIndicator"
+        app:sv_indicatorColor="#2b38e6"
+        app:sv_lowSpeedColor="#58ed21"
+        app:sv_markColor="#99000000"
+        app:sv_mediumSpeedColor="#edd029"
+        app:sv_speedTextColor="@android:color/transparent"
+        app:sv_speedometerWidth="35dp"
+        app:sv_unitTextColor="@android:color/transparent" />
 
-        <TextView
-            android:id="@+id/compass_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="end"
-            android:text="@string/text_orientation_default"
-            android:textSize="@dimen/abc_text_size_display_3_material" />
-    </TableRow>
+    <com.github.anastr.speedviewlib.ImageSpeedometer
+        android:id="@+id/oilpressuregauge"
+        android:layout_width="218dp"
+        android:layout_height="218dp"
+        android:layout_x="178dp"
+        android:layout_y="570dp"
+        app:sv_image="@drawable/exampleoiltemp"
+        app:sv_speedTextColor="@android:color/transparent"
+        app:sv_unitTextColor="@android:color/transparent" />
 
-    <TableRow
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+    <com.github.anastr.speedviewlib.ImageSpeedometer
+        android:id="@+id/temperaturegauge"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
+        android:layout_x="868dp"
+        android:layout_y="565dp"
+        app:sv_image="@drawable/examplewatertemp"
+        app:sv_speedTextColor="@android:color/transparent"
+        app:sv_unitTextColor="@android:color/transparent"/>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:tag="FUEL_CONSUMPTION"
-            android:text="@string/text_consumption_default" />
+    <TextView
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_x="695dp"
+        android:layout_y="692dp"
+        android:text="OBD"
+        android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:tag="ENGINE_RUNTIME"
-            android:text="@string/text_runtime_default" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:tag="ENGINE_RPM"
-            android:text="" />
-    </TableRow>
-
-    <ScrollView
-        android:id="@+id/data_scroll"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="top"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        android:elevation="2dp"
-        android:outlineProvider="bounds">
-
-        <TableLayout
-            android:id="@+id/data_table"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="*">
-        </TableLayout>
-    </ScrollView>
-
-    <TableRow
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/text_gps"
-            android:textSize="@dimen/abc_text_size_medium_material" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/text_bluetooth"
-            android:textSize="@dimen/abc_text_size_medium_material" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/text_obd"
-            android:textSize="@dimen/abc_text_size_medium_material" />
+    <TextView
+        android:id="@+id/obd_status"
+        android:layout_width="37dp"
+        android:layout_height="wrap_content"
+        android:layout_x="708dp"
+        android:layout_y="739dp"
+        android:text=""
+        android:textSize="18sp" />
 
 
-    </TableRow>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="794dp"
+        android:layout_y="691dp"
+        android:text="BT"
+        android:textSize="18sp" />
 
-    <TableRow
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/bt_status"
+        android:layout_width="37dp"
+        android:layout_height="wrap_content"
+        android:layout_x="799dp"
+        android:layout_y="734dp"
+        android:text=""
+        android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/GPS_POS"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
 
-        <TextView
-            android:id="@+id/BT_STATUS"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="318dp"
+        android:layout_height="73dp"
+        android:layout_x="523dp"
+        android:layout_y="564dp"
+        android:max="100" />
 
-        <TextView
-            android:id="@+id/OBD_STATUS"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="" />
-    </TableRow>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/ok"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="411dp"
+        android:layout_y="593dp"
+        android:text="ok" />
+
+    <CheckBox
+        android:id="@+id/withTremble"
+        android:layout_width="206dp"
+        android:layout_height="56dp"
+        android:layout_x="437dp"
+        android:layout_y="657dp"
+        android:checked="true"
+        android:text="withTremble" />
+
+    <TextView
+        android:id="@+id/textSpeed"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_x="19dp"
+        android:layout_y="605dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="50pt" />
+
+
+</AbsoluteLayout>
