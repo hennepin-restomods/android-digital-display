@@ -296,7 +296,7 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
                 .getDefaultAdapter();
 
         preRequisites = btAdapter != null && btAdapter.isEnabled();
-        if (!preRequisites && prefs.getBoolean(ConfigActivity.ENABLE_BT_KEY, false)) {
+        if (!preRequisites &&  false /*prefs.getBoolean(ConfigActivity.ENABLE_BT_KEY, false)*/) {
             preRequisites = btAdapter != null && btAdapter.enable();
         }
 
