@@ -108,6 +108,13 @@
         android:text="Engine Runtime"
         android:textSize="20sp" />
 
+    <Button
+        android:id="@+id/immersive"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="66dp"
+        android:layout_y="451dp" />
+
 </AbsoluteLayout>
 
     <!--tools:context="com.hennepinrestomods.androiddigitaldisplay.ui.ExampleDashboardActivity"

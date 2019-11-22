@@ -22,6 +22,7 @@ import android.os.PowerManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AbsoluteLayout;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -105,6 +106,9 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
 
     @InjectView(R.id.dashboard_view)
     private AbsoluteLayout dashboardView;
+
+    @InjectView(R.id.immersive)
+    private Button immersiveButton;
 
     //@Inject
     //private SensorManager sensorManager;
@@ -259,6 +263,23 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
             bluetoothDefaultIsEnable = btAdapter.isEnabled();
 
         obdStatusTextView.setText(getString(R.string.status_obd_disconnected));
+
+        immersiveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setImmersive();
+            }
+        });
+    }
+
+    private void setImmersive() {
+        this.getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
     }
 
     @Override
