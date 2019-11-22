@@ -21,8 +21,8 @@
         android:id="@+id/tachometer"
         android:layout_width="wrap_content"
         android:layout_height="232dp"
-        android:layout_x="573dp"
-        android:layout_y="56dp"
+        android:layout_x="575dp"
+        android:layout_y="71dp"
         app:sv_centerCircleColor="#b2f941ff"
         app:sv_highSpeedColor="#ec2f33"
         app:sv_image="@drawable/exampletachometer"
@@ -58,16 +58,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="568dp"
-        android:layout_y="450dp"
+        android:layout_x="495dp"
+        android:layout_y="445dp"
         android:text="OBD"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/obd_status"
-        android:layout_width="37dp"
+        android:layout_width="87dp"
         android:layout_height="wrap_content"
-        android:layout_x="565dp"
+        android:layout_x="500dp"
         android:layout_y="487dp"
         android:text=""
         android:textSize="18sp" />
@@ -83,9 +83,9 @@
 
     <TextView
         android:id="@+id/bt_status"
-        android:layout_width="37dp"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_x="636dp"
+        android:layout_x="635dp"
         android:layout_y="486dp"
         android:text=""
         android:textSize="18sp" />
