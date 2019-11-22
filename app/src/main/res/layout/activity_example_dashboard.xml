@@ -90,6 +90,24 @@
         android:text=""
         android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/engine_runtime"
+        android:layout_width="82dp"
+        android:layout_height="35dp"
+        android:layout_x="288dp"
+        android:layout_y="500dp"
+        android:tag="ENGINE_RUNTIME"
+        android:textSize="24sp"
+        android:text="@string/text_runtime_default" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="256dp"
+        android:layout_y="457dp"
+        android:text="Engine Runtime"
+        android:textSize="20sp" />
+
 </AbsoluteLayout>
 
     <!--tools:context="com.hennepinrestomods.androiddigitaldisplay.ui.ExampleDashboardActivity"
