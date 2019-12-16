@@ -136,6 +136,13 @@
         android:layout_x="430dp"
         android:layout_y="188dp" />
 
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="432dp"
+        android:layout_y="261dp" />
+
 </AbsoluteLayout>
 
     <!--tools:context="com.hennepinrestomods.androiddigitaldisplay.ui.ExampleDashboardActivity"

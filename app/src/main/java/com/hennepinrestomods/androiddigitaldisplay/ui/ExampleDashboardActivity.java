@@ -100,9 +100,7 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
     @InjectView(R.id.temperaturegauge)
     private ImageSpeedometer waterTemperature;
 
-    private ArrayList<ImageSpeedometer> gauges = new ArrayList<ImageSpeedometer>(
-            Arrays.asList(speedometer, tachometer, oilTemperature, waterTemperature)
-    );
+    private ArrayList<ImageSpeedometer> gauges = new ArrayList<ImageSpeedometer>();
 
     @InjectView(R.id.dashboard_view)
     private AbsoluteLayout dashboardView;
@@ -119,12 +117,15 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
     @InjectView(R.id.stopData)
     private Button stopDataButton;
 
+    @InjectView(R.id.settings)
+    private Button settingsButton;
+
     //@Inject
     //private SensorManager sensorManager;
 
     @Inject
     private PowerManager powerManager;
-
+    @Inject
     private SharedPreferences prefs;
     private boolean isServiceBound;
     private AbstractGatewayService service;
@@ -240,18 +241,32 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
         }
         */
 
-        switch(cmdName){
-            case "Engine RPM":
-                tachometer.speedTo(Float.parseFloat(cmdResult));
-            case "Vehicle Speed":
-                speedometer.speedTo(Float.parseFloat(cmdResult));
-            case "Engine oil temperature":
-                oilTemperature.speedTo(Float.parseFloat(cmdResult));
-            case "Engine Coolant Temperature":
-                waterTemperature.speedTo(Float.parseFloat(cmdResult));
+        if(cmdName == "Engine RPM" || cmdName == "ENGINE_RPM"){
+            tachometer.speedTo(parseRPM(cmdResult));
+        }
+        else if(cmdName == "Vehicle Speed" || cmdName == "SPEED"){
+            speedometer.speedTo(parseSpeed(cmdResult));
+        }
+        else if(cmdName == "Engine oil temperature" || cmdName == "ENGINE_OIL_TEMP"){
+            oilTemperature.speedTo(parseTemperature(cmdResult));
+        }
+        else if(cmdName == "Engine Coolant Temperature" || cmdName == "ENGINE_COOLANT_TEMP") {
+            waterTemperature.speedTo(parseTemperature(cmdResult));
         }
 
         commandResult.put(cmdID, cmdResult);
+    }
+
+    private float parseRPM(String input) {
+        return Float.parseFloat(input.substring(0, input.length() - 3));
+    }
+
+    private float parseSpeed(String input) {
+        return Float.parseFloat(input.substring(0, input.length() - 4));
+    }
+
+    private float parseTemperature(String input) {
+        return Float.parseFloat(input.substring(0, input.length() - 2));
     }
 
     @Override
@@ -300,6 +315,18 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
                 stopLiveData();
             }
         });
+
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateConfig();
+            }
+        });
+
+        gauges.add(speedometer);
+        gauges.add(tachometer);
+        gauges.add(oilTemperature);
+        gauges.add(waterTemperature);
     }
 
     private void setImmersive() {
