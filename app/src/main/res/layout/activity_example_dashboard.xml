@@ -115,6 +115,27 @@
         android:layout_x="66dp"
         android:layout_y="451dp" />
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="67dp"
+        android:layout_y="514dp" />
+
+    <Button
+        android:id="@+id/startData"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="431dp"
+        android:layout_y="115dp" />
+
+    <Button
+        android:id="@+id/stopData"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="430dp"
+        android:layout_y="188dp" />
+
 </AbsoluteLayout>
 
     <!--tools:context="com.hennepinrestomods.androiddigitaldisplay.ui.ExampleDashboardActivity"

@@ -24,4 +24,9 @@ public class ExampleInstrumentedTest {
 
         assertEquals("com.hennepinrestomods.androiddigitaldisplay", appContext.getPackageName());
     }
+
+    @Test
+    public void testExampleDashboard() {
+
+    }
 }

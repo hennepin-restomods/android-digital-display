@@ -1,5 +1,7 @@
 package com.hennepinrestomods.androiddigitaldisplay;
 
+import com.hennepinrestomods.androiddigitaldisplay.io.ObdGatewayService;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -14,4 +16,12 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void testObdGatewayServiceTag() {
+        assertEquals(ObdGatewayService.getTag(), ObdGatewayService.class.getName() );
+    }
+
+    @Test
+    public void test
 }

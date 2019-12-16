@@ -43,6 +43,10 @@ public class ObdGatewayService extends AbstractGatewayService {
     @Inject
     SharedPreferences prefs;
 
+    public String getTag() {
+        return TAG;
+    }
+
     private BluetoothDevice dev = null;
     private BluetoothSocket sock = null;
 

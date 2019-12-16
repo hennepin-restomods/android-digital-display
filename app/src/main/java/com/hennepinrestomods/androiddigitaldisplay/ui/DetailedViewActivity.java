@@ -75,7 +75,6 @@ import roboguice.inject.InjectView;
 import static com.hennepinrestomods.androiddigitaldisplay.ui.ConfigActivity.getGpsDistanceUpdatePeriod;
 import static com.hennepinrestomods.androiddigitaldisplay.ui.ConfigActivity.getGpsUpdatePeriod;
 
-// Some code taken from https://github.com/barbeau/gpstest
 
 @ContentView(R.layout.main)
 public class DetailedViewActivity extends RoboActivity implements ObdProgressListener, LocationListener, GpsStatus.Listener {

@@ -110,6 +110,15 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
     @InjectView(R.id.immersive)
     private Button immersiveButton;
 
+    @InjectView(R.id.back)
+    private Button backButton;
+
+    @InjectView(R.id.startData)
+    private Button startDataButton;
+
+    @InjectView(R.id.stopData)
+    private Button stopDataButton;
+
     //@Inject
     //private SensorManager sensorManager;
 
@@ -270,6 +279,27 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
                 setImmersive();
             }
         });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+                backToMain();
+            }
+        });
+
+        startDataButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startLiveData();
+            }
+        });
+
+        stopDataButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stopLiveData();
+            }
+        });
     }
 
     private void setImmersive() {
@@ -280,6 +310,10 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+    }
+
+    private void backToMain() {
+        this.finish();
     }
 
     @Override
