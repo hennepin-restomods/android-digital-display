@@ -241,20 +241,17 @@ public class ExampleDashboardActivity extends RoboActivity implements ObdProgres
         }
         */
 
-        if(cmdName == "Engine RPM" || cmdName == "ENGINE_RPM"){
-            tachometer.speedTo(parseRPM(cmdResult));
-        }
-        else if(cmdName == "Vehicle Speed" || cmdName == "SPEED"){
-            speedometer.speedTo(parseSpeed(cmdResult));
-        }
-        else if(cmdName == "Engine oil temperature" || cmdName == "ENGINE_OIL_TEMP"){
-            oilTemperature.speedTo(parseTemperature(cmdResult));
-        }
-        else if(cmdName == "Engine Coolant Temperature" || cmdName == "ENGINE_COOLANT_TEMP") {
-            waterTemperature.speedTo(parseTemperature(cmdResult));
+
+        if(cmdID != null) {
+            if (cmdID == "Engine RPM" || cmdID == "ENGINE_RPM") {
+                tachometer.speedTo(parseRPM(cmdResult));
+            } else if (cmdID == "Vehicle Speed" || cmdID == "SPEED") {
+                speedometer.speedTo(parseSpeed(cmdResult));
+            }
+
+            commandResult.put(cmdID, cmdResult);
         }
 
-        commandResult.put(cmdID, cmdResult);
     }
 
     private float parseRPM(String input) {

@@ -7,6 +7,7 @@
 
     <com.github.anastr.speedviewlib.ImageSpeedometer
         android:id="@+id/speedometer"
+        android:tag="SPEED"
         android:layout_width="wrap_content"
         android:layout_height="237dp"
         android:layout_x="119dp"
@@ -19,6 +20,7 @@
 
     <com.github.anastr.speedviewlib.ImageSpeedometer
         android:id="@+id/tachometer"
+        android:tag="ENGINE_RPM"
         android:layout_width="wrap_content"
         android:layout_height="232dp"
         android:layout_x="575dp"
