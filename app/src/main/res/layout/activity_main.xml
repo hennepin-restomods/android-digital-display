@@ -53,8 +53,14 @@
         android:layout_height="141dp"
         android:layout_x="133dp"
         android:layout_y="438dp"
+        app:sv_startDegree="160"
+        app:sv_endDegree="415"
+        app:sv_minSpeed="140"
+        app:sv_maxSpeed="280"
         app:sv_withTremble="false"
         app:sv_image="@drawable/exampleoiltemp"
+        app:sv_indicator="NeedleIndicator"
+        app:sv_indicatorColor="#2b38e6"
         app:sv_speedTextColor="@android:color/transparent"
         app:sv_unitTextColor="@android:color/transparent" />
 
@@ -64,8 +70,14 @@
         android:layout_height="93dp"
         android:layout_x="746dp"
         android:layout_y="431dp"
+        app:sv_startDegree="190"
+        app:sv_endDegree="340"
+        app:sv_minSpeed="100"
+        app:sv_maxSpeed="240"
         app:sv_withTremble="false"
         app:sv_image="@drawable/examplewatertemp"
+        app:sv_indicator="NeedleIndicator"
+        app:sv_indicatorColor="#2b38e6"
         app:sv_speedTextColor="@android:color/transparent"
         app:sv_unitTextColor="@android:color/transparent" />
 

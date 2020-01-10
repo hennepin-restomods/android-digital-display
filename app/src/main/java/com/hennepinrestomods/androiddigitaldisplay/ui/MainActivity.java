@@ -118,7 +118,7 @@ public class MainActivity extends RoboActivity implements ObdProgressListener {
     private ImageSpeedometer tachometer;
 
     @InjectView(R.id.oilpressuregauge)
-    private ImageSpeedometer oilTemperature;
+    private ImageSpeedometer oilPressure;
 
     @InjectView(R.id.temperaturegauge)
     private ImageSpeedometer waterTemperature;
@@ -270,6 +270,10 @@ public class MainActivity extends RoboActivity implements ObdProgressListener {
                 tachometer.speedTo(parseRPM(cmdResult));
             } else if (cmdID == "Vehicle Speed" || cmdID == "SPEED") {
                 speedometer.speedTo(parseSpeed(cmdResult));
+            } else if (cmdID == "Engine Coolant Temperature" || cmdID == "ENGINE_COOLANT_TEMP") {
+                waterTemperature.speedTo(parseTemperature(cmdResult));
+            } else if (cmdID == "Engine oil temperature" || cmdID == "ENGINE_OIL_TEMP") {
+                oilPressure.speedTo(parseOil(cmdResult));
             }
 
             commandResult.put(cmdID, cmdResult);
@@ -286,6 +290,10 @@ public class MainActivity extends RoboActivity implements ObdProgressListener {
     }
 
     private float parseTemperature(String input) {
+        return Float.parseFloat(input.substring(0, input.length() - 2));
+    }
+
+    private float parseOil(String input) {
         return Float.parseFloat(input.substring(0, input.length() - 2));
     }
 
@@ -338,7 +346,7 @@ public class MainActivity extends RoboActivity implements ObdProgressListener {
 
         gauges.add(speedometer);
         gauges.add(tachometer);
-        gauges.add(oilTemperature);
+        gauges.add(oilPressure);
         gauges.add(waterTemperature);
     }
 
