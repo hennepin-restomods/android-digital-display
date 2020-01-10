@@ -138,15 +138,8 @@
         android:id="@+id/immersive"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_x="66dp"
-        android:layout_y="451dp" />
-
-    <Button
-        android:id="@+id/back"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_x="67dp"
-        android:layout_y="514dp" />
+        android:layout_x="57dp"
+        android:layout_y="454dp" />
 
     <Button
         android:id="@+id/startData"
@@ -197,16 +190,8 @@
         android:id="@+id/immersiveTextView"
         android:layout_width="76dp"
         android:layout_height="wrap_content"
-        android:layout_x="61dp"
-        android:layout_y="498dp"
+        android:layout_x="44dp"
+        android:layout_y="514dp"
         android:text="immersive" />
-
-    <TextView
-        android:id="@+id/backTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="75dp"
-        android:layout_y="565dp"
-        android:text="back" />
 
 </AbsoluteLayout>
