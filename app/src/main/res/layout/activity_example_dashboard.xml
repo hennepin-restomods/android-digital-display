@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dashboard_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -144,6 +145,46 @@
         android:layout_height="50dp"
         android:layout_x="432dp"
         android:layout_y="261dp" />
+
+    <TextView
+        android:id="@+id/startDataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="438dp"
+        android:layout_y="167dp"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/stopDataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="439dp"
+        android:layout_y="240dp"
+        android:text="Stop" />
+
+    <TextView
+        android:id="@+id/settingsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="432dp"
+        android:layout_y="315dp"
+        android:text="Settings" />
+
+    <TextView
+        android:id="@+id/immersiveTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="55dp"
+        android:layout_y="497dp"
+        android:text="immersive" />
+
+    <TextView
+        android:id="@+id/backTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="62dp"
+        android:layout_y="565dp"
+        android:text="back" />
 
 </AbsoluteLayout>
 
