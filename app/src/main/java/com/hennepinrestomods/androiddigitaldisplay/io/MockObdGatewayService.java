@@ -9,14 +9,11 @@ import com.github.pires.obd.commands.protocol.SelectProtocolCommand;
 import com.github.pires.obd.commands.protocol.TimeoutCommand;
 import com.github.pires.obd.commands.temperature.AmbientAirTemperatureCommand;
 import com.github.pires.obd.enums.ObdProtocols;
-import com.hennepinrestomods.androiddigitaldisplay.ui.ExampleDashboardActivity;
 import com.hennepinrestomods.androiddigitaldisplay.ui.MainActivity;
 import com.hennepinrestomods.androiddigitaldisplay.io.ObdCommandJob.ObdCommandJobState;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-
-import roboguice.activity.RoboActivity;
 
 /**
  * This service is primarily responsible for establishing and maintaining a
@@ -96,24 +93,12 @@ public class MockObdGatewayService extends AbstractGatewayService {
                 job.setState(ObdCommandJobState.FINISHED);
                 final ObdCommandJob job2 = job;
 
-                if (ctx.getClass().getName() == MainActivity.class.getName()){
-                    ((MainActivity) ctx).runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            ((MainActivity) ctx).stateUpdate(job2);
-                        }
-                    });
-                }
-                else if (ctx.getClass().getName() == ExampleDashboardActivity.class.getName()){
-                    ((ExampleDashboardActivity) ctx).runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            ((ExampleDashboardActivity) ctx).stateUpdate(job2);
-                        }
-                    });
-                }
-
-
+                ((MainActivity) ctx).runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ((MainActivity) ctx).stateUpdate(job2);
+                    }
+                });
             }
         }
     }
