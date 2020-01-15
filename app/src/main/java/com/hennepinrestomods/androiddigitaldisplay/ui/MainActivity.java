@@ -131,9 +131,6 @@ public class MainActivity extends RoboActivity implements ObdProgressListener {
     @InjectView(R.id.immersive)
     private Button immersiveButton;
 
-    @InjectView(R.id.back)
-    private Button backButton;
-
     @InjectView(R.id.startData)
     private Button startDataButton;
 
